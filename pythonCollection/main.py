@@ -1,16 +1,19 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from pythonCollection.SubClasses.ReadUserInput import ReadUserInput
+from pythonCollection.SubClasses.TypeCastTheInputType import TypeCastTheInputType
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def main():
+    print("Executing the Python Collection Project")
+    vReadUserInput = ReadUserInput
+    vTypeCastTheInputType = TypeCastTheInputType
+    print("Please type EXIT to stop inputting the data")
+    while True:
+        vInput = vReadUserInput.read()
+        if vInput == "":
+            break
+        vInput = vTypeCastTheInputType.typeCastInput(vInput)
+        print(type(vInput))
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    main()
